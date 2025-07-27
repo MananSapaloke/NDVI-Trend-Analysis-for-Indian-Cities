@@ -1,4 +1,4 @@
-# Urban Green Cover Analysis: An Interactive Power BI Dashboard
+# NDVI-Trend-Analysis-for-Indian-Cities
 
 ## Project Overview
 
