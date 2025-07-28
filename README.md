@@ -1,74 +1,101 @@
-# NDVI-Trend-Analysis-for-Indian-Cities
+# NDVI Trend Analysis for Indian Cities (2010–2023)
 
-## Project Overview
+## 🌱 Introduction to NDVI
 
-This project provides a comprehensive analysis of urban green cover, measured by the Normalized Difference Vegetation Index (NDVI), for nine major Indian cities from 2010 to 2023. The core of this project is a dynamic, multi-page Power BI dashboard that transforms a raw CSV dataset into an interactive and insightful analytical tool.
+**NDVI (Normalized Difference Vegetation Index)** is a satellite-derived index that quantifies the presence and health of vegetation. It is calculated using the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs):
 
-The dashboard is designed for a wide audience, including urban planners, environmental researchers, policymakers, and data enthusiasts, allowing them to explore trends, compare cities, and understand the seasonal dynamics of urban vegetation.
+NDVI = (NIR - RED) / (NIR + RED)
 
-### Key Metrics & Concepts
-*   **NDVI (Normalized Difference Vegetation Index):** A satellite-based indicator for the presence and health of green vegetation. Higher values signify denser and healthier plant life.
-*   **Seasonality:** The analysis of cyclical patterns in green cover, primarily driven by climate events like monsoons.
-*   **Year-over-Year (YoY) Change:** A metric to track the annual progress or decline in a city's greenness.
+NDVI values range from -1 to +1:
+- Values close to **+1** indicate **dense, healthy vegetation**.
+- Values near **0** suggest **barren areas** (rock, sand, urban land).
+- Negative values usually indicate **water bodies** or clouds.
+
+This makes NDVI an essential metric for tracking green cover trends in urban landscapes, especially over time and across seasons.
 
 ---
 
-## Features
+## 📊 Project Overview
 
-The Power BI report is structured into four distinct pages, each serving a specific analytical purpose:
+This project offers a detailed visual and statistical analysis of urban green cover trends in **ten major Indian cities** from **2010 to 2023**, based on monthly NDVI values. The centerpiece is an interactive multi-page **Power BI dashboard**, built to transform raw satellite-derived data into actionable insights.
+
+The dashboard serves **urban planners, environmental researchers, policymakers, and data enthusiasts**, enabling them to:
+- Track greenness over time
+- Identify seasonal patterns
+- Compare cities
+- Investigate the impact of urban development on vegetation
+
+---
+
+## 🧩 Key Metrics & Concepts
+
+- **NDVI (Normalized Difference Vegetation Index):** Primary measure of vegetation density.
+- **Seasonality:** Analysis of how NDVI changes during different months of the year.
+- **Year-over-Year (YoY) Change:** Tracks long-term gains or losses in green cover.
+
+---
+
+## 📈 Dashboard Features
 
 ### 1. 🏙️ Executive Overview
-A high-level summary of the national urban green cover landscape.
-*   **KPI Cards:** At-a-glance metrics for overall average NDVI, the top-performing ("greenest") city, and peak recorded greenness.
-*   **Geographic Map:** Visualizes the distribution and intensity of green cover across India.
-*   **City Ranking:** A dynamic bar chart ranking cities by their average NDVI, sortable by year.
-*   **Annual Trend Comparison:** A line chart for comparing the long-term greenness trajectories of multiple cities simultaneously.
+A national-level summary of urban greenness.
+- **KPI Cards** for average NDVI, greenest city, and max NDVI value
+- **Map View** showing spatial NDVI intensity across cities
+- **Sortable Bar Chart** ranking cities by NDVI
+- **Multi-City Trend Line** for tracking changes over years
 
 ### 2. 🌳 City Deep-Dive
-A focused analytical page to explore the unique profile of a single selected city.
-*   **Dynamic KPIs:** Key statistics update automatically based on the city chosen.
-*   **Historical Trend Analysis:** A detailed line chart showing the monthly evolution of NDVI over the 14-year period, complete with a trend line.
-*   **Seasonal Pattern Cycle:** A chart illustrating the "typical year" for a city's vegetation, clearly showing the impact of seasons.
-*   **Performance Tracker:** A column chart displaying the year-over-year percentage change in green cover, highlighting periods of significant growth or decline.
+Focused view of a single city.
+- Dynamic **KPIs** that auto-update by city
+- **Historical Trend** line (2010–2023)
+- **Seasonal Cycle** chart showing average month-wise NDVI
+- **YoY % Change** tracker for policy insights
 
 ### 3. 🆚 Comparative Analysis
-A powerful tool for a direct, head-to-head comparison of any two cities.
-*   **Dual Slicers:** Independent dropdowns to select two cities for comparison.
-*   **Comparative Trend Charts:** Overlaid line charts for directly comparing historical and seasonal NDVI patterns.
-
+Direct head-to-head comparison between two cities.
+- Dual dropdowns to choose cities
+- Overlaid **historical** and **seasonal** trend charts
 
 ### 4. ℹ️ Info & Methodology
-A crucial page that builds trust and provides context for the data.
-*   **Clear Definitions:** Explanations of NDVI and key terms.
-*   **Data Transparency:** Details on the data source, time period, and processing steps.
-*   **User Guide:** Simple instructions on how to use and navigate the dashboard.
+Transparency and credibility.
+- Simple explanations of NDVI and terminology
+- Data sourcing and processing steps
+- Guide on using the dashboard
 
 ---
 
-## Technical Stack
+## ⚙️ Technical Stack
 
-*   **Data Source:** `Monthly_NDVI_Cities_2010_2023.csv`
-*   **Data Transformation & Modeling:** **Power Query** (for data cleaning, type casting, and creating supplementary tables).
-*   **Data Analysis & Calculations:** **DAX (Data Analysis Expressions)**
-    *   Calculated Measures for `Average NDVI`, `Max NDVI`, `YoY Change %`, etc.
-    *   Advanced DAX for dynamic titles, conditional filtering (`TREATAS`), and context-aware calculations (`SWITCH`, `SELECTEDVALUE`).
-*   **Data Visualization:** **Power BI Desktop**
-    *   Interactive visuals including line charts, bar charts, maps, matrices, and KPI cards.
-    *   Features like slicers, cross-filtering, and dynamic titles to create a responsive user experience.
-
----
-
-## How to Use This Project
-
-1.  **Prerequisites:** You will need **Microsoft Power BI Desktop** installed on your machine.
-2.  **Clone the Repository:** Download or clone this project repository to your local machine.
-3.  **Open the File:** Locate the Power BI file (`.pbix`) and open it with Power BI Desktop.
-4.  **Explore:** The dashboard is fully interactive. Click on slicers, chart elements, and map bubbles to explore the data. Use the navigation buttons or tabs to move between the different analysis pages.
+- **Data Source:** `Urban_NDVI_2010_2023.csv`
+- **Cleaning & Modeling:** Power Query
+- **Analysis Engine:** DAX (Data Analysis Expressions)
+  - Measures like `Avg NDVI`, `Max NDVI`, `YoY Change %`, etc.
+  - Advanced functions like `TREATAS`, `SWITCH`, and `SELECTEDVALUE`
+- **Visualization:** Power BI Desktop
+  - Line charts, bar charts, slicers, maps, KPIs, and dynamic visuals
 
 ---
 
-## Author
+## 🚀 How to Use This Project
 
-*   **Manan Sapaloke**
-*   **(http://www.linkedin.com/in/manansapaloke)**
-*   **https://github.com/MananSapaloke**
+1. **Install** Microsoft Power BI Desktop
+2. **Clone or Download** this repository to your local machine
+3. **Open** the `.pbix` file using Power BI
+4. **Explore** the visuals by interacting with slicers, charts, and filters
+
+---
+
+## ✅ License
+
+This project is licensed under the **[MIT License](./LICENSE)** — feel free to use, modify, and share with attribution.
+
+---
+
+## 👤 Author
+
+**Manan Sapaloke**  
+🔗 [LinkedIn](http://www.linkedin.com/in/manansapaloke)  
+💻 [GitHub](https://github.com/MananSapaloke)
+
+---
+
